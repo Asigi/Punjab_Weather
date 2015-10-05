@@ -1,6 +1,64 @@
 <resources>
-    <string name="app_name">Pweather</string>
+    <string name="app_name">Punjab Weather App</string>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_location">LocationActivity</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+
+
+    <string-array name="district_names">
+        <item></item>
+        <item>ਲੁਧਿਆਣਾ</item>
+        <item>ਅੰਮ੍ਰਿਤਸਰ</item>
+        <item>ਗੁਰਦਾਸਪੁਰ</item>
+        <item>ਚੰਡੀਗੜ੍ਹ</item>
+        <item>ਪਟਿਆਲਾ</item>
+        <item>ਜਲੰਧਰ</item>
+        <item>ਫ਼ਿਰੋਜ਼ਪੁਰ</item>
+        <item>ਸੰਗਰੂਰ</item>
+        <item>ਹੁਸ਼ਿਆਰਪੁਰ</item>
+        <item>ਬਠਿੰਡਾ</item>
+        <item>ਤਰਨ ਤਾਰਨ</item>
+        <item>ਮੋਗਾ</item>
+        <item>ਸਾਹਿਬਜ਼ਾਦਾ ਅਜੀਤ ਸਿੰਘ ਨਗਰ</item>
+        <item>ਮੁਕਤਸਰ</item>
+        <item>ਕਪੂਰਥਲਾ</item>
+        <item>ਮਾਨਸਾ</item>
+        <item>ਬਰਨਾਲਾ</item>
+        <item>ਫਰੀਦਕੋਟ</item>
+        <item>ਫਤਿਹਗੜ੍ਹ ਸਾਹਿਬ</item>
+        <item>ਫਾਜ਼ਿਲਕਾ</item>
+        <item>ਪਠਾਨਕੋਟ</item>
+        <item>ਰੋਪੜ</item>
+        <item>ਸ਼ਹੀਦ ਭਗਤ ਸਿੰਘ ਨਗਰ</item>
+    </string-array>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </resources>
+
+
+
+
+

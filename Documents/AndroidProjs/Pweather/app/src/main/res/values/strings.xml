@@ -9,7 +9,7 @@
 
 
     <string-array name="district_names">
-        <item></item>
+        <item>(ਇੱਥੇ ਇੱਕ ਚੁਣੋ)</item>
         <item>ਲੁਧਿਆਣਾ</item>
         <item>ਅੰਮ੍ਰਿਤਸਰ</item>
         <item>ਗੁਰਦਾਸਪੁਰ</item>
@@ -35,97 +35,180 @@
         <item>ਸ਼ਹੀਦ ਭਗਤ ਸਿੰਘ ਨਗਰ</item>
     </string-array>
 
-
-    <string-array name="Ludhiana-cv">
-
-    </string-array>
-
-    <string-array name="Amritsar-cv">
-
-    </string-array>
-
-    <string-array name="Gurdaspur-cv">
-
-    </string-array>
-
-    <string-array name="Chandigarh-cv">
+    <string-array name="Ludhiana_cv">
+        <item>ਰਾਏਕੋਟ</item>
+        <item>ਖੰਨਾ</item>
+        <item>ਪਾਇਲ</item>
+        <item>ਸਮਰਾਲਾ</item>
+        <item>ਜਗਰਾੳ</item>
+        <item>ਹੰਬੜਾ</item>
+        <item>ਭੰਡੂਰੀ</item>
+        <item>ਸਿੰਧਵਾ ਖ਼ਾਸ</item>
 
     </string-array>
 
-    <string-array name="Patiala-cv">
+    <string-array name="Amritsar_cv">
+        <item>ਅਜਨਾਲਾ</item>
+        <item>ਬਾਬਾ ਬਕਾਲਾ</item>
+        <item></item> ADD city
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="Gurdaspur_cv">
+        <item></item> ADD city
+        <item>ਬਟਾਲਾ</item>
+        <item>ਧਰ ਕਲਨ</item> FIX THIS MISTAKE kalan maybe spelt wrong
+        <item>ਡੇਰਾ ਬਾਬਾ ਨਾਨਕ</item>
 
     </string-array>
 
-    <string-array name="Jalandar-cv">
+    <string-array name="Chandigarh_cv">
+        <item></item> ADD city
 
     </string-array>
 
-    <string-array name="Firozpur-cv">
-
+    <string-array name="Patiala_cv">
+        <item></item> ADD city
+        <item>ਨਾਭਾ</item>
+        <item>ਸਮਾਣਾ</item>
+        <item></item> add patron tehsil
+        <item>ਰਾਜਪੁਰਾ</item>
+        <item></item>
     </string-array>
 
-    <string-array name="Sangrur-cv">
-
+    <string-array name="Jalandar_cv">
+        <item></item> ADD city
+        <item>ਨਕੋਦਰ</item>
+        <item>ਸ਼ਾਹਕੋਟ</item>
+        <item>ਫਿਲੌਰ</item>
     </string-array>
 
-    <string-array name="Hoshiarpur-cv">
-
+    <string-array name="Firozpur_cv">
+        <item></item> ADD city
+        <item>ਅਬੋਹਰ</item>
+        <item>ਜ਼ੀਰਾ</item>
+        <item>ਗੁਰੂ ਹਰਸਹਾਏ</item>
+        <item></item>
     </string-array>
 
-    <string-array name="Batinda-cv">
-
+    <string-array name="Sangrur_cv">
+        <item></item> ADD city
+        <item></item>
+        <item></item>
+        <item></item>
     </string-array>
 
-    <string-array name="TarnTaran-cv">
-
+    <string-array name="Hoshiarpur_cv">
+        <item></item> ADD city
+        <item></item>
+        <item></item>
+        <item></item>
     </string-array>
 
-    <string-array name="Moga-cv">
-
+    <string-array name="Batinda_cv">
+        <item></item> ADD city
+        <item></item>
+        <item></item>
+        <item></item>
     </string-array>
 
-    <string-array name="SASnagar-cv">
-
+    <string-array name="TarnTaran_cv">
+        <item></item> ADD city
+        <item></item>
+        <item></item>
+        <item></item>
     </string-array>
 
-    <string-array name="Muktsar-cv">
-
+    <string-array name="Moga_cv">
+        <item></item> ADD city
+        <item></item>
+        <item></item>
+        <item></item>
     </string-array>
 
-    <string-array name="Kapurthala-cv">
-
+    <string-array name="SASnagar_cv">
+        <item></item> ADD city
+        <item></item>
+        <item></item>
+        <item></item>
     </string-array>
 
-    <string-array name="Mansa-cv">
-
+    <string-array name="Muktsar_cv">
+        <item></item> ADD city
+        <item></item>
+        <item></item>
+        <item></item>
     </string-array>
 
-    <string-array name="Barnala-cv">
-
+    <string-array name="Kapurthala_cv">
+        <item></item> ADD city
+        <item></item>
+        <item></item>
+        <item></item>
     </string-array>
 
-    <string-array name="Faridkot-cv">
-
+    <string-array name="Mansa_cv">
+        <item></item> ADD city
+        <item></item>
+        <item></item>
+        <item></item>
     </string-array>
 
-    <string-array name="Fatigarh-cv">
-
+    <string-array name="Barnala_cv">
+        <item></item> ADD city
+        <item></item>
+        <item></item>
+        <item></item>
     </string-array>
 
-    <string-array name="Fazilka-cv">
-
+    <string-array name="Faridkot_cv">
+        <item></item> ADD city
+        <item></item>
+        <item></item>
+        <item></item>
     </string-array>
 
-    <string-array name="Patankot-cv">
-
+    <string-array name="Fatigarh_cv">
+        <item></item> ADD city
+        <item></item>
+        <item></item>
+        <item></item>
     </string-array>
 
-    <string-array name="Ropur-cv">
-
+    <string-array name="Fazilka_cv">
+        <item></item> ADD city
+        <item></item>
+        <item></item>
+        <item></item>
     </string-array>
 
-    <string-array name="SBSnagar-cv">
+    <string-array name="Patankot_cv">
+        <item></item> ADD city
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
+    <string-array name="Ropur_cv">
+        <item></item> ADD city
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="SBSnagar_cv">
+        <item>sbs </item> ADD city
+        <item>s</item>
+        <item>b</item>
+        <item>s</item>
+    </string-array>
+
+
+
+    <string-array name="empty_list">
+        <item></item>
     </string-array>
 
 

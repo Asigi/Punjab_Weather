@@ -27,7 +27,9 @@
         android:spinnerMode="dropdown"
         android:layout_below="@+id/textView3"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:gravity="right"
+        android:contextClickable="false" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -45,10 +47,12 @@
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner"
+        android:id="@+id/LocationVillageSpinner"
         android:layout_below="@+id/textView4"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:spinnerMode="dropdown"
+        android:gravity="right" />
 
     <Button
         android:layout_width="match_parent"

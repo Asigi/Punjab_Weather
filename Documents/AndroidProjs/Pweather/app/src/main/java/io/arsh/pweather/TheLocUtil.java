@@ -10,7 +10,9 @@ import android.content.SharedPreferences;
  */
 public class TheLocUtil {
     SharedPreferences myPreferences;
-    private static int villDist;
+    private static int myVill;
+    private static int myDist;
+
 
 
 

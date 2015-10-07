@@ -36,6 +36,7 @@
     </string-array>
 
     <string-array name="Ludhiana_cv">
+        <item>ਲੁਧਿਆਣਾ ਸ਼ਹਿਰ</item>
         <item>ਰਾਏਕੋਟ</item>
         <item>ਖੰਨਾ</item>
         <item>ਪਾਇਲ</item>
@@ -44,23 +45,37 @@
         <item>ਹੰਬੜਾ</item>
         <item>ਭੰਡੂਰੀ</item>
         <item>ਸਿੰਧਵਾ ਖ਼ਾਸ</item>
+        <item>ਦੋਰਾਹਾ</item>
 
     </string-array>
 
     <string-array name="Amritsar_cv">
-        <item>ਅਜਨਾਲਾ</item>
-        <item>ਬਾਬਾ ਬਕਾਲਾ</item>
-        <item></item> ADD city
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>ਅੰਮ੍ਰਿਤਸਰ ਸ਼ਹਿਰ</item>
+        <item>ਅਜਨਾਲਾ</item> Ajnala
+        <item>ਬਾਬਾ ਬਕਾਲਾ</item> Baba Bakala
+        <item>ਰਾਜਾ sansi</item> Raja Sansi
+        <item></item> Budha Theh
+        <item></item> Buttar Sivia
+        <item></item> Jandiala Guru
+        Majitha
+        Rajasansi
+        Rayya
+        Ramdass
+
     </string-array>
 
     <string-array name="Gurdaspur_cv">
-        <item></item> ADD city
-        <item>ਬਟਾਲਾ</item>
-        <item>ਧਰ ਕਲਨ</item> FIX THIS MISTAKE kalan maybe spelt wrong
-        <item>ਡੇਰਾ ਬਾਬਾ ਨਾਨਕ</item>
+        <item>ਗੁਰਦਾਸਪੁਰ ਸ਼ਹਿਰ</item>
+        <item>ਬਟਾਲਾ</item> Batala
+        <item>ਡੇਰਾ ਬਾਬਾ ਨਾਨਕ</item>  Dera Baba Nanak
+        Dhariwal
+        Dina Nagar
+        Fatehgarh Churian
+        Jugial
+        Kalanaur
+        Qadian
+
+
 
     </string-array>
 
@@ -70,69 +85,100 @@
     </string-array>
 
     <string-array name="Patiala_cv">
-        <item></item> ADD city
-        <item>ਨਾਭਾ</item>
-        <item>ਸਮਾਣਾ</item>
-        <item></item> add patron tehsil
-        <item>ਰਾਜਪੁਰਾ</item>
-        <item></item>
+        <item>ਪਟਿਆਲਾ ਸ਼ਹਿਰ</item>
+        <item>ਨਾਭਾ</item> nabha
+        <item>ਸਮਾਣਾ</item>  Samana
+        <item></item> add patron tehsil OR is it patran?
+        <item>ਰਾਜਪੁਰਾ</item> Rajpura
+        <item>ਘਨੌਰ</item> ghanaur
+        <item>ਘੱਗਾ</item> Ghagga
+        <item>ਸਨੌਰ</item> Sanaur
+        Bhankharpur
+        Banaur
     </string-array>
 
-    <string-array name="Jalandar_cv">
-        <item></item> ADD city
-        <item>ਨਕੋਦਰ</item>
-        <item>ਸ਼ਾਹਕੋਟ</item>
-        <item>ਫਿਲੌਰ</item>
+    <string-array name="Jalandar_cv"> Jalandhar
+        <item>ਜਲੰਧਰ</item> ADD city
+        <item>ਨਕੋਦਰ</item> Nakodar
+        <item>ਸ਼ਾਹਕੋਟ</item> Shahkot
+        <item>ਫਿਲੌਰ</item> Phillaur
+        Jalandhar Cantonment
+        Nakodar
+        Jandiala
+        Adampur
+        Nurmahal
+        Goraya
+        Bhogpur
+        alawalpur
+
+
     </string-array>
 
     <string-array name="Firozpur_cv">
-        <item></item> ADD city
-        <item>ਅਬੋਹਰ</item>
-        <item>ਜ਼ੀਰਾ</item>
-        <item>ਗੁਰੂ ਹਰਸਹਾਏ</item>
-        <item></item>
+        <item>ਫ਼ਿਰੋਜ਼ਪੁਰ</item> Firozpur
+        <item>ਜ਼ੀਰਾ</item> Zira
+        <item>ਫ਼ਿਰੋਜ਼ਪੁਰ ਛਾਉਣੀ</item> Firozpur Cantonment
+        <item>ਗੁਰੂ ਹਰ ਸਹਾਏ</item>Guru Har Sahai
+        <item>ਮਖੂ</item> Makhu
+        <item>ਤਲਵੰਡੀ ਭਾਈ</item> Talwandi Bhai
+
     </string-array>
 
     <string-array name="Sangrur_cv">
-        <item></item> ADD city
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>ਸੰਗਰੂਰ</item>
+        <item>ਧੂਰੀ</item> Dhuri
+        <item></item> Lehragaga
+        <item></item> Bhawanigarh
+        Dirba
+        <item>ਖਨੌਰੀ</item> Khanauri
+        <item>ਲੋਗੋਵਾਲ</item> Longowal
+        Moonak
+
+
     </string-array>
 
     <string-array name="Hoshiarpur_cv">
-        <item></item> ADD city
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>ਹੁਸ਼ਿਆਰਪੁਰ </item> ADD city
+        <item></item> Dasuya
+        <item></item> Garhshanker
+        <item></item> Mukerian
+        Talwara
+        Urmar Tanda
+
     </string-array>
 
-    <string-array name="Batinda_cv">
-        <item></item> ADD city
-        <item></item>
-        <item></item>
-        <item></item>
+    <string-array name="Batinda_cv"> Bathinda
+        <item>ਬਠਿੰਡਾ</item> ADD city
+        <item></item> Bhucho Mandi
+        <item></item> Maur
+        <item></item> Raman
+        Rampura Phul
+        Bhai Rupa
+        Goniana
     </string-array>
 
     <string-array name="TarnTaran_cv">
-        <item></item> ADD city
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>ਤਰਨ ਤਾਰਨ</item> Tarn Taran
+        <item></item> Bhikhiwind
+        <item>ਖੇਮਕਰਨ</item> Khemkaran
+        <item>ਪੱਟੀ</item> Patti
     </string-array>
 
     <string-array name="Moga_cv">
-        <item></item> ADD city
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>ਮੋਗਾ</item>
+        <item></item> Nihal Singh Wala
+        <item></item> Dharamkot
+        <item></item> Badhni Kalan
+        Bagha Purana
     </string-array>
 
     <string-array name="SASnagar_cv">
-        <item></item> ADD city
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>ਮੋਹਾਲੀ</item>Mohali
+        <item></item> Dera Bassi
+        <item>ਖਰੜ</item> Kharar
+        <item>ਜ਼ੀਰਕਪੁਰ</item> Zirakpur
+        <item>ਲਾਲੜੂ</item>Lalru
+        Banur
     </string-array>
 
     <string-array name="Muktsar_cv">
@@ -150,10 +196,11 @@
     </string-array>
 
     <string-array name="Mansa_cv">
-        <item></item> ADD city
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>ਮਾਨਸਾ</item> ADD city
+        <item>ਬੁਢਲਾਡਾ</item> Budhlada
+        <item></item> Bhikhi
+        <item></item> Jhunir
+        Sardulgarh
     </string-array>
 
     <string-array name="Barnala_cv">
@@ -199,10 +246,11 @@
     </string-array>
 
     <string-array name="SBSnagar_cv">
-        <item>sbs </item> ADD city
-        <item>s</item>
-        <item>b</item>
-        <item>s</item>
+        <item>ਬਲਾਚੌਰ</item> Balachaur
+        <item></item> Banga
+        <item>ਨਵਾਂਸ਼ਹਿਰ</item> Nawanshahr
+        Mukandpur
+        Rahon
     </string-array>
 
 

@@ -36,157 +36,146 @@
     </string-array>
 
     <string-array name="Ludhiana_cv">
-        <item>ਲੁਧਿਆਣਾ ਸ਼ਹਿਰ</item>
-        <item>ਰਾਏਕੋਟ</item>
-        <item>ਖੰਨਾ</item>
-        <item>ਪਾਇਲ</item>
-        <item>ਸਮਰਾਲਾ</item>
-        <item>ਜਗਰਾੳ</item>
-        <item>ਹੰਬੜਾ</item>
-        <item>ਭੰਡੂਰੀ</item>
-        <item>ਸਿੰਧਵਾ ਖ਼ਾਸ</item>
-        <item>ਦੋਰਾਹਾ</item>
+        <item>ਲੁਧਿਆਣਾ ਸ਼ਹਿਰ</item> 30.91 N 75.85 E
+        <item>ਰਾਏਕੋਟ</item> Raikot
+        <item>ਖੰਨਾ</item> Khanna
+        <item>ਪਾਇਲ</item> Payal
+        <item>ਸਮਰਾਲਾ</item> Samrala
+        <item>ਜਗਰਾੳ</item> Jagroan
+        <item>ਹੰਬੜਾ</item> Hambran
+        <item>ਸਾਹਨੇਵਾਲ</item> Sahnewal
+        <item>ਮਾਛੀਵਾੜਾ</item> Machhiwara
+        <item>ਦੋਰਾਹਾ</item> Doraha
 
     </string-array>
 
     <string-array name="Amritsar_cv">
-        <item>ਅੰਮ੍ਰਿਤਸਰ ਸ਼ਹਿਰ</item>
+        <item>ਅੰਮ੍ਰਿਤਸਰ ਸ਼ਹਿਰ</item> 31.64 N 74.86 E
         <item>ਅਜਨਾਲਾ</item> Ajnala
         <item>ਬਾਬਾ ਬਕਾਲਾ</item> Baba Bakala
         <item>ਰਾਜਾ sansi</item> Raja Sansi
-        <item></item> Budha Theh
-        <item></item> Buttar Sivia
-        <item></item> Jandiala Guru
-        Majitha
+        <item>ਜੰਡਿਆਲਾ ਗੁਰੂ</item> Jandiala Guru
+        <item>ਮਜੀਠਾ</item>Majitha
+        <item>ਰਈਆ</item> Rayya
+        <item>ਰਾਮਦਾਸ</item> Ramdass
+        Budha Theh
+        Buttar Sivia
         Rajasansi
-        Rayya
-        Ramdass
-
     </string-array>
 
     <string-array name="Gurdaspur_cv">
-        <item>ਗੁਰਦਾਸਪੁਰ ਸ਼ਹਿਰ</item>
+        <item>ਗੁਰਦਾਸਪੁਰ ਸ਼ਹਿਰ</item> 32.0333 N 75.40 E
         <item>ਬਟਾਲਾ</item> Batala
         <item>ਡੇਰਾ ਬਾਬਾ ਨਾਨਕ</item>  Dera Baba Nanak
-        Dhariwal
-        Dina Nagar
+        <item>ਧਾਰੀਵਾਲ</item> Dhariwal
+        <item>ਦੀਨਾ ਨਗਰ</item> Dina Nagar
+        <item>ਕਲਾਨੌਰ</item> Kalanaur
+        <item>ਕ਼ਾਦੀਆਂ</item> Qadian
         Fatehgarh Churian
-        Jugial
-        Kalanaur
-        Qadian
-
-
-
     </string-array>
 
     <string-array name="Chandigarh_cv">
-        <item></item> ADD city
+        <item>ਚੰਡੀਗੜ੍ਹ ਸ਼ਹਿਰ</item> 30.75 N 76.78 E
 
     </string-array>
 
     <string-array name="Patiala_cv">
-        <item>ਪਟਿਆਲਾ ਸ਼ਹਿਰ</item>
+        <item>ਪਟਿਆਲਾ ਸ਼ਹਿਰ</item> 30.34°N 76.38°E
         <item>ਨਾਭਾ</item> nabha
         <item>ਸਮਾਣਾ</item>  Samana
-        <item></item> add patron tehsil OR is it patran?
         <item>ਰਾਜਪੁਰਾ</item> Rajpura
         <item>ਘਨੌਰ</item> ghanaur
         <item>ਘੱਗਾ</item> Ghagga
         <item>ਸਨੌਰ</item> Sanaur
         Bhankharpur
         Banaur
+        patron tehsil OR patran
     </string-array>
 
     <string-array name="Jalandar_cv"> Jalandhar
-        <item>ਜਲੰਧਰ</item> ADD city
+        <item>ਜਲੰਧਰ ਸ਼ਹਿਰ</item>  31.326°N 75.576°E
         <item>ਨਕੋਦਰ</item> Nakodar
         <item>ਸ਼ਾਹਕੋਟ</item> Shahkot
         <item>ਫਿਲੌਰ</item> Phillaur
-        Jalandhar Cantonment
-        Nakodar
-        Jandiala
-        Adampur
-        Nurmahal
-        Goraya
-        Bhogpur
-        alawalpur
-
-
+        <item>ਜਲੰਧਰ ਛਾਉਣੀ</item> Jalandhar Cantonment
+        <item>ਨਕੋਦਰ</item> Nakodar
+        <item>ਜੰਡਿਆਲਾ</item> Jandiala
+        <item>ਆਦਮਪੁਰ</item> Adampur
+        <item>ਨੂਰਮਹਿਲ</item> Nurmahal
+        <item>ਗੁਰਾਇਆ</item> Goraya
+        <item>ਭੋਗਪੁਰ</item> Bhogpur
+        ਅਲਾਵਲਪੁਰ Alawalpur (not needed for now)
     </string-array>
 
     <string-array name="Firozpur_cv">
-        <item>ਫ਼ਿਰੋਜ਼ਪੁਰ</item> Firozpur
+        <item>ਫ਼ਿਰੋਜ਼ਪੁਰ ਸ਼ਹਿਰ</item> Firozpur 30.9166 N 74.6 E
         <item>ਜ਼ੀਰਾ</item> Zira
         <item>ਫ਼ਿਰੋਜ਼ਪੁਰ ਛਾਉਣੀ</item> Firozpur Cantonment
         <item>ਗੁਰੂ ਹਰ ਸਹਾਏ</item>Guru Har Sahai
         <item>ਮਖੂ</item> Makhu
         <item>ਤਲਵੰਡੀ ਭਾਈ</item> Talwandi Bhai
-
     </string-array>
 
     <string-array name="Sangrur_cv">
-        <item>ਸੰਗਰੂਰ</item>
+        <item>ਸੰਗਰੂਰ ਸ਼ਹਿਰ</item> 30.2506 N 75.8442 E
         <item>ਧੂਰੀ</item> Dhuri
-        <item></item> Lehragaga
-        <item></item> Bhawanigarh
-        Dirba
+        <item>ਲਹਿਰਾਗਾਗਾ</item> Lehragaga
+        <item>ਭਵਾਨੀਗੜ੍ਹ</item> Bhawanigarh
+        <item>ਦਿੜ੍ਹਬਾ</item> Dirba
         <item>ਖਨੌਰੀ</item> Khanauri
         <item>ਲੋਗੋਵਾਲ</item> Longowal
-        Moonak
-
-
+        <item>ਮੂਨਕ</item> Moonak
     </string-array>
 
     <string-array name="Hoshiarpur_cv">
-        <item>ਹੁਸ਼ਿਆਰਪੁਰ </item> ADD city
-        <item></item> Dasuya
-        <item></item> Garhshanker
-        <item></item> Mukerian
-        Talwara
+        <item>ਹੁਸ਼ਿਆਰਪੁਰ ਸ਼ਹਿਰ</item> 31.53 N 75.92 E
+        <item>ਦਸੂਹਾ</item> Dasuya
+        <item>ਗੜ੍ਹਸ਼ੰਕਰ</item> Garhshanker
+        <item>ਤਲਵਾੜਾ</item> Talwara
+        Mukerian
         Urmar Tanda
-
     </string-array>
 
     <string-array name="Batinda_cv"> Bathinda
-        <item>ਬਠਿੰਡਾ</item> ADD city
-        <item></item> Bhucho Mandi
-        <item></item> Maur
-        <item></item> Raman
-        Rampura Phul
-        Bhai Rupa
-        Goniana
+        <item>ਬਠਿੰਡਾ ਸ਼ਹਿਰ</item> 30.23 N 74.9519 E
+        <item>ਭੁੱਚੋ ਮੰਡੀ</item> Bhucho Mandi
+        <item>ਮੌੜ</item> Maur
+        <item>ਰਾਮਪੁਰਾ ਫੂਲ</item> Rampura Phul
+        <item>ਭਾਈ ਰੂਪਾ</item> Bhai Rupa
+        <item>ਗੋਨਿਆਣਾ</item> Goniana
+        Raman
     </string-array>
 
     <string-array name="TarnTaran_cv">
-        <item>ਤਰਨ ਤਾਰਨ</item> Tarn Taran
-        <item></item> Bhikhiwind
+        <item>ਤਰਨ ਤਾਰਨ ਸ਼ਹਿਰ</item> 31.4491 N 74.9205 E
+        <item>ਭਿਖੀਵਿੰਡ</item> Bhikhiwind
         <item>ਖੇਮਕਰਨ</item> Khemkaran
         <item>ਪੱਟੀ</item> Patti
     </string-array>
 
     <string-array name="Moga_cv">
-        <item>ਮੋਗਾ</item>
-        <item></item> Nihal Singh Wala
-        <item></item> Dharamkot
-        <item></item> Badhni Kalan
-        Bagha Purana
+        <item>ਮੋਗਾ ਸ਼ਹਿਰ</item> 30.8 N 75.17 E
+        <item>ਨਿਹਾਲ ਸਿੰਘ ਵਾਲਾ</item> Nihal Singh Wala
+        <item>ਧਰਮਕੋਟ</item> Dharamkot
+        <item>ਬੱਧਨੀ ਕਲਾਂ</item> Badhni Kalan
+        <item>ਬਾਘਾ ਪੁਰਾਣ</item> Bagha Purana
     </string-array>
 
     <string-array name="SASnagar_cv">
-        <item>ਮੋਹਾਲੀ</item>Mohali
-        <item></item> Dera Bassi
+        <item>ਮੋਹਾਲੀ ਸ਼ਹਿਰ</item>Mohali/Ajitgarh 30.78 N 76.69 E
+        <item>ਡੇਰਾ ਬੱਸੀ</item> Dera Bassi
         <item>ਖਰੜ</item> Kharar
         <item>ਜ਼ੀਰਕਪੁਰ</item> Zirakpur
         <item>ਲਾਲੜੂ</item>Lalru
-        Banur
+        <item>ਬਨੂੜ</item>Banur
     </string-array>
 
     <string-array name="Muktsar_cv">
-        <item>ਸ੍ਰੀ ਮੁਕਤਸਰ ਸਾਹਿਬ</item> Sri Muktsar Sahib
+        <item>ਸ੍ਰੀ ਮੁਕਤਸਰ ਸਾਹਿਬ</item> Sri Muktsar Sahib 30.29 N 74.31 E
         <item>ਗਿੱਦੜਬਾਹਾ</item> Giddarbaha
-        <item></item> Malout
+        <item>ਮਲੋਟ</item> Malout
 
-        The villages below are very small...
+        (The villages below are very small)
         <item>ਹੁਸਨਰ</item> Husnar
         <item>ਰੁਖਾਲਾ</item> Rukhala
         <item>ਆਸਾ ਬੁੱਟਰ</item> Aasa Buttar
@@ -197,75 +186,74 @@
     </string-array>
 
     <string-array name="Kapurthala_cv">
-        <item>ਕਪੂਰਥਲਾ</item>
-        <item></item> Phagwara
-        <item></item> Sultanpur Lodhi
-        Begowal
-        Bhulath
+        <item>ਕਪੂਰਥਲਾ ਸ਼ਹਿਰ</item> 31.38 N 75.38 E
+        <item>ਫਗਵਾੜਾ</item> Phagwara
+        <item>ਸੁਲਤਾਨਪੁਰ ਲੋਧੀ</item> Sultanpur Lodhi
+        <item>ਬੇਗੋਵਾਲ</item> Begowal
+        <item>ਭੁਲੱਥ</item> Bhulath
     </string-array>
 
     <string-array name="Mansa_cv">
-        <item>ਮਾਨਸਾ</item> ADD city
+        <item>ਮਾਨਸਾ ਸ਼ਹਿਰ</item> 29.98 N 75.38 E
         <item>ਬੁਢਲਾਡਾ</item> Budhlada
-        <item></item> Bhikhi
-        <item></item> Jhunir
-        Sardulgarh
+        <item>ਭੀਖੀ</item> Bhikhi
+        <item>ਝੁਨੀਰ</item> Jhunir
+        <item>ਸਰਦੂਲਗੜ੍ਹ</item> Sardulgarh
     </string-array>
 
     <string-array name="Barnala_cv">
-        <item></item> ADD city
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>ਬਰਨਾਲਾ ਸ਼ਹਿਰ</item>  30.38 N 75.55 E
+        <item>ਧਨੌਲਾ</item> Dhanaula
     </string-array>
 
     <string-array name="Faridkot_cv">
-        <item></item> ADD city
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>ਫ਼ਰੀਦਕੋਟ ਸ਼ਹਿਰ</item> 30.40 N 74.45 E
+        <item>ਜੈਤੋ</item> Jaitu (note that Wiki might have wrong coords)
+        <item>ਕੋਟ ਕਪੂਰਾ</item> Kotkapura
     </string-array>
 
     <string-array name="Fatigarh_cv">
-        <item></item> ADD city
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>ਸਰਹਿੰਦ-ਫ਼ਤਿਹਗੜ੍ਹ ਸ਼ਹਿਰ</item> Sirhind-Fategarh 30.22 N 76.14 E
+        <item>ਅਮਲੋਹ</item> Amloh
+        <item>ਬੱਸੀ ਪਠਾਣਾ</item> Bassi Pathana
+        <item>ਮੰਡੀ ਗੋਬਿੰਦਗੜ੍ਹ</item> Mandi Gobindgarh
+        <item>ਖਮਾਣੋਂ</item> Khamanon
     </string-array>
 
     <string-array name="Fazilka_cv">
-        <item></item> ADD city
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>ਫਾਜ਼ਿਲਕਾ ਸ਼ਹਿਰ</item> 30.403 N 74.025 E
+        <item>ਅਬੋਹਰ</item> Abohar
+        <item>ਜਲਾਲਾਬਾਦ</item> Jalalabad
     </string-array>
 
-    <string-array name="Patankot_cv">
-        <item></item> ADD city
-        <item></item>
-        <item></item>
-        <item></item>
+    <string-array name="Patankot_cv"> Pathankot
+        <item>ਪਠਾਣਕੋਟ ਸ਼ਹਿਰ</item> 32.266814 N 75.6 E
+        <item>ਸੁਜਾਨਪੁਰ</item> Sujanpur
+        <item>ਮਾਧੋਪੁਰ</item> Madhopur माधोपुर
+        <item>ਧਾਰ ਕਲਾਂ</item> Dhar Kalan
+        <item>ਜੁਗਿਆਲ</item> Jugial
     </string-array>
 
-    <string-array name="Ropur_cv">
-        <item></item> ADD city
-        <item></item>
-        <item></item>
-        <item></item>
+    <string-array name="Ropur_cv"> Ropar or Rupnagar, same thing.
+        <item>ਰੂਪਨਗਰ</item> Rupnagar  30.9664 N 76.5331 E
+        <item>ਅਨੰਦਪੁਰ ਸਾਹਿਬ</item> Anandpur Sahib
+        <item>ਮੋਰਿੰਡਾ</item> Morinda
+        <item>ਨੰਗਲ</item> Nangal
+        <item>ਚਮਕੌਰ ਸਾਹਿਬ</item> Chamkaur Sahib
+        Karoran
     </string-array>
 
     <string-array name="SBSnagar_cv">
         <item>ਬਲਾਚੌਰ</item> Balachaur
-        <item></item> Banga
-        <item>ਨਵਾਂਸ਼ਹਿਰ</item> Nawanshahr
-        Mukandpur
-        Rahon
+        <item>ਬੰਗਾ</item> Banga
+        <item>ਨਵਾਂਸ਼ਹਿਰ</item> Nawanshahr 31.1253 N 76.1164 E (of the old district)
+        <item>ਮੁਕੰਦਪੁਰ</item> Mukandpur
+        <item>ਰਾਹੋਂ</item>Rahon
     </string-array>
 
 
-
     <string-array name="empty_list">
-        <item></item>
+        <item></item> Intentionally left empty to avoid null exception
     </string-array>
 
 

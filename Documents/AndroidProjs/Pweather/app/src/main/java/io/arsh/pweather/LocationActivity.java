@@ -24,7 +24,6 @@ public class LocationActivity extends AppCompatActivity {
     protected String myVillage = ""; //this represents both the villages and the cities within the district
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,9 +39,9 @@ public class LocationActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 myDistrict = parent.getItemAtPosition(position).toString();
-                new Toaster(LocationActivity.this, parent, position);
-                //Toast.makeText(LocationActivity.this, "array: " + getResources().getStringArray(arraySetter()).length, Toast.LENGTH_SHORT).show();
 
+                //new Toaster(LocationActivity.this, parent, position);
+                //Toast.makeText(LocationActivity.this, "array: " + getResources().getStringArray(arraySetter()).length, Toast.LENGTH_SHORT).show();
 
                 ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(LocationActivity.this,
                         arraySetter(), android.R.layout.simple_spinner_item);
@@ -52,6 +51,7 @@ public class LocationActivity extends AppCompatActivity {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                         myVillage = parent.getItemAtPosition(position).toString();
+                        Toast.makeText(LocationActivity.this, "array int#: " + arraySetter(), Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -86,6 +86,7 @@ public class LocationActivity extends AppCompatActivity {
             String explanation = "ਤੁਹਾਨੂੰ ਆਪਣੇ ਜ਼ਿਲ੍ਹੇ ਦੀ ਚੋਣ ਕਰਨੀ ਚਾਹੀਦੀ ਹੈ";
             Toast.makeText(this, explanation , Toast.LENGTH_SHORT).show();
         } else {
+            TheLocUtil.setHomeVillDist(myVillage, myDistrict);
             //if so, add their village to sharedPreferences.
             //send the user to the temperature information screen.
 

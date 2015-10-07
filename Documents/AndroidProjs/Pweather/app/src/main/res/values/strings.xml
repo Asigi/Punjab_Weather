@@ -255,6 +255,7 @@
     <string-array name="empty_list">
         <item></item> Intentionally left empty to avoid null exception
     </string-array>
+    <string name="title_activity_temp">TempActivity</string>
 
 
 

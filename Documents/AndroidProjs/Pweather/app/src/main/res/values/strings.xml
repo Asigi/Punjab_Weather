@@ -182,17 +182,26 @@
     </string-array>
 
     <string-array name="Muktsar_cv">
-        <item></item> ADD city
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>ਸ੍ਰੀ ਮੁਕਤਸਰ ਸਾਹਿਬ</item> Sri Muktsar Sahib
+        <item>ਗਿੱਦੜਬਾਹਾ</item> Giddarbaha
+        <item></item> Malout
+
+        The villages below are very small...
+        <item>ਹੁਸਨਰ</item> Husnar
+        <item>ਰੁਖਾਲਾ</item> Rukhala
+        <item>ਆਸਾ ਬੁੱਟਰ</item> Aasa Buttar
+        <item>ਬੁੱਟਰ ਬਖੂਹਾ</item> Buttar Bakhuha
+        <item>ਬੁੱਟਰ ਸਰੀਂਹ</item> Buttar Sarinh
+        <item>ਚੌਂਤਰਾ</item> Chauntra
+        <item>ਛੱਤਿਆਣਾ</item> Chhattiana
     </string-array>
 
     <string-array name="Kapurthala_cv">
-        <item></item> ADD city
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>ਕਪੂਰਥਲਾ</item>
+        <item></item> Phagwara
+        <item></item> Sultanpur Lodhi
+        Begowal
+        Bhulath
     </string-array>
 
     <string-array name="Mansa_cv">

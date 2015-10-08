@@ -81,8 +81,7 @@ public class LocationActivity extends AppCompatActivity {
 
             //send the user to the temperature information screen.
             Intent intent = new Intent(this, TempActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK); //this prevents you from getting back to the previous page.
+
             startActivity(intent);
 
 

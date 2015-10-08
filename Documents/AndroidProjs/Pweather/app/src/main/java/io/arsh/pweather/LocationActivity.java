@@ -41,7 +41,6 @@ public class LocationActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 myDistrict = parent.getItemAtPosition(position).toString();
 
-                //new Toaster(LocationActivity.this, parent, position);
                 //Toast.makeText(LocationActivity.this, "array: " + getResources().getStringArray(arraySetter()).length, Toast.LENGTH_SHORT).show();
 
                 ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(LocationActivity.this,
@@ -67,19 +66,9 @@ public class LocationActivity extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-        //then after getting the district info, make the village/city question appear
-
-        //Q: what happens if the user enters in their village and then changes the district?
-        //A: I'll figure it out after I try doing what is said above.
-
-
     }
+
+
 
     @OnClick(R.id.LocationButton)
     public void submitLocation() {
@@ -87,11 +76,11 @@ public class LocationActivity extends AppCompatActivity {
             String explanation = "ਤੁਹਾਨੂੰ ਆਪਣੇ ਜ਼ਿਲ੍ਹੇ ਦੀ ਚੋਣ ਕਰਨੀ ਚਾਹੀਦੀ ਹੈ";
             Toast.makeText(this, explanation , Toast.LENGTH_SHORT).show();
         } else {
-            TheLocUtil.setHomeVillDist(myVillage, myDistrict);
+            TheLocUtil.setHomeVillDist(myVillage, myDistrict, LocationActivity.this);
             //if so, add their village to sharedPreferences.
 
             //send the user to the temperature information screen.
-            Intent intent = new Intent(this, LocationActivity.class);
+            Intent intent = new Intent(this, TempActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK); //this prevents you from getting back to the previous page.
             startActivity(intent);
@@ -156,17 +145,6 @@ public class LocationActivity extends AppCompatActivity {
             return R.array.SBSnagar_cv;
         } else {
             return R.array.empty_list;
-        }
-    }
-
-
-
-    /**
-     * This class makes a toast.
-     */
-    public class Toaster {
-        public Toaster(Activity activity, AdapterView<?> parent, int position) {
-            Toast.makeText(activity, "chose: " + parent.getItemAtPosition(position), Toast.LENGTH_SHORT).show();
         }
     }
 

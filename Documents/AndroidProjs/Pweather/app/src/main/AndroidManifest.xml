@@ -23,6 +23,7 @@
         <activity
             android:name=".LocationActivity"
             android:label="@string/title_activity_location"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -31,6 +32,7 @@
         <activity
             android:name=".TempActivity"
             android:label="@string/title_activity_temp"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

@@ -17,14 +17,15 @@ public class TheLocUtil {
 
 
 
-    public static void setHomeVillDist(String theVillage, String theDistrict) {
+    public static void setHomeVillDist(String theVillage, String theDistrict, Activity theActivity) {
         myVill = theVillage;
         myDist = theDistrict;
-        changeToVillage();
+        changeToVillage(theActivity);
     }
 
 
-    public static void changeToVillage() {
+    public static void changeToVillage(Activity theActivity) {
+        initializeVillage(theActivity);
         myPreferences.edit().putString("Village", myVill);
         myPreferences.edit().putString("District", myDist);
     }

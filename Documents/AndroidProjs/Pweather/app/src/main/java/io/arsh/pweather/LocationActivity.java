@@ -1,6 +1,7 @@
 package io.arsh.pweather;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -88,7 +89,12 @@ public class LocationActivity extends AppCompatActivity {
         } else {
             TheLocUtil.setHomeVillDist(myVillage, myDistrict);
             //if so, add their village to sharedPreferences.
+
             //send the user to the temperature information screen.
+            Intent intent = new Intent(this, LocationActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK); //this prevents you from getting back to the previous page.
+            startActivity(intent);
 
 
         }

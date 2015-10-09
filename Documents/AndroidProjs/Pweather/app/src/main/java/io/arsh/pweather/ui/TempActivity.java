@@ -61,7 +61,6 @@ public class TempActivity extends AppCompatActivity {
         final double longitude = TheLocUtil.getLongitude();
 
 
-
         myRefreshImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,12 +79,15 @@ public class TempActivity extends AppCompatActivity {
 
 
     private void getForecast(double theLat, double theLong) {
-        String apiKey = "c6b2ddbf6c41031ec01ee83c14dca99a";
+        //String apiKey = "c6b2ddbf6c41031ec01ee83c14dca99a"; open weather
+        String apiKey = "18131678eb944e61639caac84cb622b6"; //forecast.io
 
         String forecastURL = "https://api.forecast.io/forecast/" + apiKey +
                 "/" + theLat + "," + theLong;
 
         if (TheNetUtil.isNetworkAvailable(TempActivity.this)) {
+            toggleRefresh();
+
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
                     .url(forecastURL)

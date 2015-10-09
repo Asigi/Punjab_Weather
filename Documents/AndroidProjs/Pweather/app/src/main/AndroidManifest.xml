@@ -23,8 +23,8 @@
         <activity
             android:name=".LocationActivity"
             android:label="@string/title_activity_location"
-            android:screenOrientation="portrait"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="io.arsh.pweather.MainActivity" />
@@ -32,11 +32,27 @@
         <activity
             android:name=".TempActivity"
             android:label="@string/title_activity_temp"
-            android:screenOrientation="portrait"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="io.arsh.pweather.MainActivity" />
+        </activity>
+        <activity
+            android:name=".HourlyForecastActivity"
+            android:label="@string/title_activity_hourly_forecast"
+            android:parentActivityName=".TempActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.arsh.pweather.TempActivity" />
+        </activity>
+        <activity
+            android:name=".DailyForecastActivity"
+            android:label="@string/title_activity_daily_forecast"
+            android:parentActivityName=".TempActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.arsh.pweather.TempActivity" />
         </activity>
     </application>
 

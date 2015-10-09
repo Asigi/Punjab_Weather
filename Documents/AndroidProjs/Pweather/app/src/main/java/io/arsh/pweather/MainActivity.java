@@ -16,6 +16,10 @@ public class MainActivity extends AppCompatActivity {
 
     @Bind(R.id.splashButton) Button mainButton;
 
+    public static final String DAILY_FORECAST = "DAILY_FORECAST";
+    public static final String HOURLY_FORECAST = "HOURLY_FORECAST";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

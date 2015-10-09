@@ -1,16 +1,15 @@
-package io.arsh.pweather;
+package io.arsh.pweather.ui;
 
-import android.app.ActionBar;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.Button;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import io.arsh.pweather.R;
+import io.arsh.pweather.ui.LocationActivity;
 
 public class MainActivity extends AppCompatActivity {
 

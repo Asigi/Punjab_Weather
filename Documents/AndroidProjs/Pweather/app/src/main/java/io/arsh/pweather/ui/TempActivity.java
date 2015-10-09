@@ -1,13 +1,10 @@
-package io.arsh.pweather;
+package io.arsh.pweather.ui;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -29,6 +26,13 @@ import java.io.IOException;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import io.arsh.pweather.R;
+import io.arsh.pweather.utils.TheLocUtil;
+import io.arsh.pweather.utils.TheNetUtil;
+import io.arsh.pweather.weather.Current;
+import io.arsh.pweather.weather.Day;
+import io.arsh.pweather.weather.Forecast;
+import io.arsh.pweather.weather.Hour;
 
 
 public class TempActivity extends AppCompatActivity {
@@ -78,7 +82,8 @@ public class TempActivity extends AppCompatActivity {
     private void getForecast(double theLat, double theLong) {
         String apiKey = "c6b2ddbf6c41031ec01ee83c14dca99a";
 
-        String forecastURL = "";
+        String forecastURL = "https://api.forecast.io/forecast/" + apiKey +
+                "/" + theLat + "," + theLong;
 
         if (TheNetUtil.isNetworkAvailable(TempActivity.this)) {
             OkHttpClient client = new OkHttpClient();

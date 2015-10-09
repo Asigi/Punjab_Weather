@@ -1,10 +1,12 @@
-package io.arsh.pweather;
+package io.arsh.pweather.ui;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.os.Bundle;
+
+import io.arsh.pweather.R;
 
 /**
  * Created by Student on October 8, 2015

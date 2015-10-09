@@ -1,4 +1,4 @@
-package io.arsh.pweather;
+package io.arsh.pweather.weather;
 
 import android.os.Parcel;
 import android.os.Parcelable;

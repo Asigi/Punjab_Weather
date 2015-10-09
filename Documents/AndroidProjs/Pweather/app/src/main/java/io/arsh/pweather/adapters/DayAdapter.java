@@ -1,4 +1,4 @@
-package io.arsh.pweather;
+package io.arsh.pweather.adapters;
 
 
 import android.content.Context;
@@ -9,7 +9,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import io.arsh.pweather.weather.Day;
+import io.arsh.pweather.R;
 
 
 /**

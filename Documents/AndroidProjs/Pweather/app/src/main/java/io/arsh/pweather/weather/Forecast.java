@@ -1,4 +1,9 @@
-package io.arsh.pweather;
+package io.arsh.pweather.weather;
+
+import io.arsh.pweather.R;
+import io.arsh.pweather.weather.Current;
+import io.arsh.pweather.weather.Day;
+import io.arsh.pweather.weather.Hour;
 
 /**
  * Created by arshdeep on 8/10/15.

@@ -1,4 +1,4 @@
-package io.arsh.pweather;
+package io.arsh.pweather.utils;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

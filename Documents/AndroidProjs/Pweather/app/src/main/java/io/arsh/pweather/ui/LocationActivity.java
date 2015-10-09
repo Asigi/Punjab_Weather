@@ -1,11 +1,8 @@
-package io.arsh.pweather;
+package io.arsh.pweather.ui;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -15,6 +12,8 @@ import android.widget.Toast;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import io.arsh.pweather.R;
+import io.arsh.pweather.utils.TheLocUtil;
 
 public class LocationActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package io.arsh.pweather;
+package io.arsh.pweather.weather;
 
 
 import java.text.SimpleDateFormat;

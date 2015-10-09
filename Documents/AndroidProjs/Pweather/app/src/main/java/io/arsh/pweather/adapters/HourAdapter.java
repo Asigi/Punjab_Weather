@@ -1,4 +1,4 @@
-package io.arsh.pweather;
+package io.arsh.pweather.adapters;
 
 
 import android.content.Context;
@@ -9,6 +9,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import io.arsh.pweather.weather.Hour;
+import io.arsh.pweather.R;
 
 
 /**

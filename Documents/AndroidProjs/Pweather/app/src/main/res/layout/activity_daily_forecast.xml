@@ -4,7 +4,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="io.arsh.pweather.ui.DailyForecastActivity">
+    tools:context="io.arsh.pweather.ui.DailyForecastActivity"
+    android:background="#56c367">
 
     <ListView
         android:layout_width="wrap_content"
@@ -32,7 +33,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SEVEN DAY FORECAST"
+        android:text="ਅਗਲੇ  7  ਦਿਨ "
         android:id="@+id/thisWeekLabel"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"

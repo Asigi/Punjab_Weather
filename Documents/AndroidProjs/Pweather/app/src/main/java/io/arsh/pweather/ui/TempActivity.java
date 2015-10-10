@@ -225,7 +225,6 @@ public class TempActivity extends AppCompatActivity {
         mySummaryLabel.setText(current.getMySummary());
         Drawable drawable = getResources().getDrawable(current.getIconId());
         myIconImageView.setImageDrawable(drawable);
-
     }
 
     /**

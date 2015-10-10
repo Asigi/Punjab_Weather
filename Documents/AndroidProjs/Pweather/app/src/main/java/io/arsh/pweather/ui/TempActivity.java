@@ -22,6 +22,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.Date;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -40,7 +41,7 @@ public class TempActivity extends AppCompatActivity {
     @Bind(R.id.timeLabel) TextView myTimeLabel;
     @Bind(R.id.temperatureLabel) TextView myTemperatureLabel;
     @Bind(R.id.humidityValue) TextView myHumidityValue;
-    @Bind(R.id.precipValue) TextView myPrecipValue;
+    //@Bind(R.id.precipValue) TextView myPrecipValue; not available in Open, so no longer needed.
     @Bind(R.id.summaryLabel) TextView mySummaryLabel;
     @Bind(R.id.iconImageView) ImageView myIconImageView;
     @Bind(R.id.refreshImageView) ImageView myRefreshImageView;
@@ -49,6 +50,7 @@ public class TempActivity extends AppCompatActivity {
     private static final String TAG = TempActivity.class.getSimpleName();
     private Forecast myOpenForecast; //OPEN
     private Forecast myDarkForecast; //DARK SKY
+    private Forecast officialForecast; //combined
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,6 +112,8 @@ public class TempActivity extends AppCompatActivity {
 
                 @Override
                 public void onResponse(Response response) throws IOException {
+
+
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -121,7 +125,7 @@ public class TempActivity extends AppCompatActivity {
                         String jsonData = response.body().string();
                         Log.v(TAG, jsonData);
                         if (response.isSuccessful()) {
-                            myOpenForecast = parseOpenForecastDetails(jsonData);
+                            myOpenForecast = parseOpenForecastDetails(jsonData);//todo
                             //myCurWeather = getCurrentDetails(jsonData);
                             runOnUiThread(new Runnable() { //this code will cause whatever is in the inner run method to run on the main thread.
                                 @Override
@@ -165,7 +169,7 @@ public class TempActivity extends AppCompatActivity {
                                 String jsonData = response.body().string();
                                 Log.v(TAG, jsonData);
                                 if (response.isSuccessful()) {
-                                    myDarkForecast = parseForecastDetails(jsonData); //TODO This line must be called BEFORE the line that calls parseOpenForecastDetails method which is about 30 lines up from here!!!
+                                    myDarkForecast = parseForecastDetails(jsonData); //TODO This line must be called BEFORE the line that calls parseOpenForecastDetails method which is about 30 lines up from here (because of setting the time of forecasts)!!!
 
                                 } else {
                                     alertUserAboutError();
@@ -180,6 +184,8 @@ public class TempActivity extends AppCompatActivity {
 
                 }
             });
+
+            officialForecast = combineForecast(myDarkForecast, myOpenForecast);
 
         } else {
             Toast.makeText(this, R.string.network_unavailable_message, Toast.LENGTH_LONG).show();
@@ -215,16 +221,40 @@ public class TempActivity extends AppCompatActivity {
         myTemperatureLabel.setText(current.getMyTemperature() + "");
         myTimeLabel.setText("At " + current.getFormattedTime() + " it will be");
         myHumidityValue.setText(current.getMyHumidity() + "");
-        myPrecipValue.setText(current.getMyPrecipChance() + "%");
+        //myPrecipValue.setText(current.getMyPrecipChance() + "%");
         mySummaryLabel.setText(current.getMySummary());
         Drawable drawable = getResources().getDrawable(current.getIconId());
         myIconImageView.setImageDrawable(drawable);
 
     }
 
+    /**
+     * Combines the two forecasts into one.
+     * @param theDark dark forecast
+     * @param theOpen open forecast
+     * @return official combined forecast
+     */
+    private Forecast combineForecast(Forecast theDark, Forecast theOpen) {
+        Forecast forecast = new Forecast();
+
+        //get current from theOpen
+        Current oc = theOpen.getCurrent();
+        //set that current's time
+        Date date = new Date();
+        oc.setMyTime(date.getTime());
+        //set current value of forecast.
+        forecast.setCurrent(oc);
+
+        forecast.setDailyForecast(theDark.getDailyForecast());
+        forecast.setHourlyForecast(theDark.getHourlyForecast());
+
+
+        return forecast;
+    }
+
     private Forecast parseForecastDetails(String jsonData) throws JSONException {
         Forecast forecast = new Forecast();
-        forecast.setCurrent(getCurrentDetails(jsonData));
+        //forecast.setCurrent(getCurrentDetails(jsonData));
 
         forecast.setHourlyForecast(getHourlyForecast(jsonData));
         forecast.setDailyForecast(getDailyForecast(jsonData));
@@ -235,24 +265,27 @@ public class TempActivity extends AppCompatActivity {
     private Forecast parseOpenForecastDetails(String jsonData) throws JSONException {
         Forecast forecast = new Forecast();
 
-        forecast.setCurrent(getCurrentDetails2(jsonData));
+        forecast.setCurrent(getOpenCurrentDetails(jsonData));
 
         return forecast;
     }
 
-    Long findTime; //this will be retreived from the Dark json, and used for multiple things.
-
+    /**
+     * Sets the current information for the dark forecast.
+     * @param jsonData a string of json
+     * @return current data object to be entered into forecast object.
+     * @throws JSONException
+     */
     private Current getCurrentDetails(String jsonData) throws JSONException {
         JSONObject forecast = new JSONObject(jsonData);
+        Current current = new Current();
+
         String timezone = forecast.getString("timezone");
         Log.i(TAG, "From JSON: " + timezone);
 
         JSONObject currently = forecast.getJSONObject("currently"); //get currently JSON from within forecast JSON
-
-        Current current = new Current();
+        current.setMyTime(currently.getLong("time"));
         current.setMyHumidity(currently.getDouble("humidity"));
-        findTime = currently.getLong("time");
-        current.setMyTime(findTime);
         current.setMyIcon(currently.getString("icon"));
         current.setMyPrecipChance(currently.getDouble("precipProbability"));
         current.setMySummary(currently.getString("summary"));
@@ -264,25 +297,29 @@ public class TempActivity extends AppCompatActivity {
         return current;
     }
 
-    private Current getCurrentDetails2(String jsonData) throws JSONException {
+    /**
+     * Sets the current information for the open forecast
+     * @param jsonData a string of json
+     * @return current data object to be entered into forecast object.
+     * @throws JSONException
+     */
+    private Current getOpenCurrentDetails(String jsonData) throws JSONException {
+        Current current = new Current();
         JSONObject forecast = new JSONObject(jsonData);
+
         JSONObject Sys = forecast.getJSONObject("sys");
         String sunrise = Sys.getString("sunrise");
-        String sunset = Sys.getString("sunset"); //TODO, maybe use these
+        String sunset = Sys.getString("sunset"); //TODO, maybe use these in premium version of app
 
         JSONObject main = forecast.getJSONObject("main");
-
-        Current current = new Current();
-
         current.setMyHumidity(main.getDouble("humidity"));
         current.setMyTemperature(main.getDouble("temp"));
-        current.setMyTime(findTime);
 
         JSONObject weath = forecast.getJSONObject("weather");
-        //get summary(description) from weath
-        //get icon info from weath and set icon of current
+        current.setMySummary(weath.getString("main"));
+        current.setMyIcon(weath.getString("icon"));
+        current.setMyTimeZone("IST");
 
-        //timezone is always Delhi time
 
         return current;
     }

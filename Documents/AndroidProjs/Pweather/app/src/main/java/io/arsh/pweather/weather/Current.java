@@ -33,6 +33,10 @@ public class Current {
         return myTime;
     }
 
+    /**
+     * I think this fixes Unix time into something more readable
+     * @return a string representation of the time
+     */
     public String getFormattedTime() {
         SimpleDateFormat formatter = new SimpleDateFormat("h:mm a");
         formatter.setTimeZone(TimeZone.getTimeZone(getMyTimeZone()));

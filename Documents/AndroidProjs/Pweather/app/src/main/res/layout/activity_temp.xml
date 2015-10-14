@@ -10,12 +10,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="38"
+        android:text="--"
         android:id="@+id/temperatureLabel"
         android:textColor="@android:color/white"
         android:textSize="150sp"
         android:layout_below="@+id/timeLabel"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:typeface="normal" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -30,46 +31,36 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="At 7:35 it will be"
+        android:text="-:-- ਨੂ ਤਾਪਮਾਨ ਹੋਵੇਗਾ"
         android:id="@+id/timeLabel"
         android:layout_below="@id/locationLabel"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:textColor="#80ffffff"
-        android:textSize="18sp" />
+        android:textSize="14dp"
+        android:typeface="normal" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/locationLabel"
         android:textColor="#ccffffff"
-        android:textSize="20dp"
+        android:textSize="18dp"
         android:gravity="center_horizontal"
         android:text="ਤੁਹਾਡਾ ਪਿੰਡ ਜ ਸ਼ਹਿਰ \n ਜ਼ਿਲ੍ਹਾ  "
         android:layout_marginTop="10dp"
         android:layout_below="@+id/refreshImageView"
-        android:layout_centerHorizontal="true"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ਮੌਜੂਦਾ ਮੌਸਮ ਡਾਊਨਲੋਡ ਹੰਦਾ"
-        android:id="@+id/summaryLabel"
-        android:textColor="#003f04"
-        android:gravity="center_horizontal"
-        android:textSize="20dp"
-        android:layout_below="@+id/linearLayout"
-        android:layout_toLeftOf="@+id/degreeImageView"
-        android:layout_toStartOf="@+id/degreeImageView" />
+        android:layout_centerHorizontal="true"
+        android:typeface="normal" />
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/refreshImageView"
         android:src="@drawable/refresh"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:paddingTop="5dp" />
+        android:paddingTop="7dp" />
 
     <ProgressBar
         android:layout_width="wrap_content"
@@ -92,7 +83,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ਘੰਟੇ"
+            android:text="48 ਘੰਟੇ"
             android:id="@+id/hourlyButton"
             android:layout_weight="1"
             android:background="#40ffffff"
@@ -117,6 +108,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/temperatureLabel"
+        android:layout_above="@id/lowerLayout"
         android:layout_centerHorizontal="true"
         android:id="@+id/linearLayout">
 
@@ -141,29 +133,45 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="20"
+                android:text="--"
                 android:id="@+id/humidityValue"
-                android:textColor="#ffffff"
-                android:textSize="24sp"
+                android:textColor="#AAffffff"
+                android:textSize="20dp"
                 android:layout_weight="1"
                 android:gravity="left|fill_vertical"
-                android:layout_margin="5dp" />
+                android:layout_margin="5dp"
+                android:typeface="normal" />
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="10dp">
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center_horizontal">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/iconImageView"
-                android:src="@drawable/cloudy_night"
+                android:src="@drawable/clear_day"
 
                 />
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="20px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ਮੌਜੂਦਾ ਮੌਸਮ ਡਾਊਨਲੋਡ ਹੰਦਾ"
+                android:id="@+id/summaryLabel"
+                android:textColor="#003f04"
+                android:gravity="center_horizontal"
+                android:textSize="20dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_toLeftOf="@+id/degreeImageView"
+                android:layout_toStartOf="@+id/degreeImageView" />
         </LinearLayout>
 
     </LinearLayout>

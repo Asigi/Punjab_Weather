@@ -18,6 +18,7 @@ import butterknife.ButterKnife;
 import butterknife.Bind;
 import io.arsh.pweather.R;
 import io.arsh.pweather.adapters.DayAdapter;
+import io.arsh.pweather.utils.TheLocUtil;
 import io.arsh.pweather.weather.Day;
 
 public class DailyForecastActivity extends Activity {
@@ -26,12 +27,15 @@ public class DailyForecastActivity extends Activity {
     ListView myListView;
     @Bind(android.R.id.empty)
     TextView myEmptyTextView;
+    @Bind(R.id.locationLabel) TextView myLocation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_daily_forecast);
         ButterKnife.bind(this);
+
+        myLocation.setText(TheLocUtil.getCurrentVillage());
 
         Intent intent = getIntent();
         Parcelable[] parcelables = intent.getParcelableArrayExtra(MainActivity.DAILY_FORECAST);
@@ -54,7 +58,7 @@ public class DailyForecastActivity extends Activity {
                  */
                 String dayOfTheWeek = myDays[position].getDayOfTheWeek();
                 String conditions = myDays[position].getSummary();
-                String highTemp = myDays[position].getTemperatureMax() + "";
+                String highTemp = ((myDays[position].getTemperatureMax() - 32) * 5) / 9 + "";
                 String message = String.format("On %s the high will be %s and it will be %s",
                         dayOfTheWeek, highTemp, conditions);
                 Toast.makeText(DailyForecastActivity.this, message, Toast.LENGTH_LONG).show();
@@ -63,5 +67,9 @@ public class DailyForecastActivity extends Activity {
         });
 
     }
+
+
+
+
 
 }

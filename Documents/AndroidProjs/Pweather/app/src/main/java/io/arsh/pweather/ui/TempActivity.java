@@ -46,6 +46,8 @@ public class TempActivity extends AppCompatActivity {
     @Bind(R.id.iconImageView) ImageView myIconImageView;
     @Bind(R.id.refreshImageView) ImageView myRefreshImageView;
     @Bind(R.id.progressBar) ProgressBar myProgressBar;
+    @Bind(R.id.locationLabel) TextView myLocation;
+
 
     private static final String TAG = TempActivity.class.getSimpleName();
     private Forecast myOpenForecast; //OPEN
@@ -62,7 +64,6 @@ public class TempActivity extends AppCompatActivity {
 
         final double latitude = TheLocUtil.getLatitude();
         final double longitude = TheLocUtil.getLongitude();
-
 
         myRefreshImageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,8 +84,10 @@ public class TempActivity extends AppCompatActivity {
 
     private void getForecast(final double theLat, final double theLong) {
         String apiKeyW = "c6b2ddbf6c41031ec01ee83c14dca99a"; //open weather, use for current temperature
-        String forecastURLW = "http://api.openweathermap.org/data/2.5/weather?lat=" + theLat
-                + "&lon=" + theLong + "APPID={" + apiKeyW + "}";
+        String forecastURLW = "http://api.openweathermap.org/data/2.5/weather?"
+                + "lat=" + theLat
+                + "&lon=" + theLong
+                + "&APPID=" + apiKeyW + "";
 
         //http://api.openweathermap.org/data/2.5/forecast/city?id=524901&APPID={APIKEY}
         //api.openweathermap.org/data/2.5/weather?lat=35&lon=139
@@ -92,7 +95,7 @@ public class TempActivity extends AppCompatActivity {
 
         if (TheNetUtil.isNetworkAvailable(TempActivity.this)) {
             toggleRefresh();
-
+            Log.e(TAG, "getForecast(), network is available (1)");
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
                     .url(forecastURLW)
@@ -107,12 +110,15 @@ public class TempActivity extends AppCompatActivity {
                             toggleRefresh();
                         }
                     });
+                    Log.e(TAG, "getForecast(), FAILURE (1)");
+                    Log.e(TAG, "request: " + request.toString());
+                    Log.e(TAG, "Exception: " + e.getMessage());
                     alertUserAboutError();
                 }
 
                 @Override
                 public void onResponse(Response response) throws IOException {
-
+                    Log.e(TAG, "getForecast(), RESPONSE (1)");
 
                     runOnUiThread(new Runnable() {
                         @Override
@@ -126,7 +132,60 @@ public class TempActivity extends AppCompatActivity {
                         Log.v(TAG, jsonData);
                         if (response.isSuccessful()) {
                             myOpenForecast = parseOpenForecastDetails(jsonData);//todo
-                            //myCurWeather = getCurrentDetails(jsonData);
+
+                            //NOW DO THE LOAD FROM DARK SKYS
+
+                            String apiKey = "18131678eb944e61639caac84cb622b6"; //forecast.io, use for hourly/7day
+                            final String forecastURL = "https://api.forecast.io/forecast/" + apiKey +
+                                    "/" + theLat + "," + theLong;
+
+
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    OkHttpClient client2 = new OkHttpClient();
+                                    Request request2 = new Request.Builder()
+                                            .url(forecastURL)
+                                            .build();
+                                    Call call2 = client2.newCall(request2);
+                                    call2.enqueue(new Callback() {
+                                        @Override
+                                        public void onFailure(Request request, IOException e) {
+                                            Log.e(TAG, "getForecast(), FAILURE (2)");
+                                            Log.e(TAG, "request: " + request.toString());
+                                            Log.e(TAG, "Exception: " + e.getMessage());
+                                            alertUserAboutError();
+                                        }
+
+                                        @Override
+                                        public void onResponse(Response response) throws IOException {
+                                            Log.e(TAG, "getForecast(), RESPONSE (2)");
+                                            try {
+                                                String jsonData = response.body().string();
+                                                Log.v(TAG, jsonData);
+                                                if (response.isSuccessful()) {
+                                                    myDarkForecast = parseForecastDetails(jsonData); //TODO This line must be called BEFORE the line that calls parseOpenForecastDetails method which is about 30 lines up from here (because of setting the time of forecasts)!!!
+
+                                                    Log.e(TAG, myDarkForecast.getHourlyForecast() + "");
+                                                    Log.e(TAG, myOpenForecast.getCurrent().getMySummary() + "");
+
+                                                    //NOW COMBINE THEM INTO ONE
+
+                                                    officialForecast = combineForecast(myDarkForecast, myOpenForecast);
+
+                                                } else {
+                                                    alertUserAboutError();
+                                                }
+                                            } catch (IOException e) {
+                                                Log.e(TAG, "Exception caught: ", e);
+                                            } catch (JSONException e) {
+                                                Log.e(TAG, "Exception caught: ", e);
+                                            }
+                                        }
+                                    });
+                                }
+                            });
+
                             runOnUiThread(new Runnable() { //this code will cause whatever is in the inner run method to run on the main thread.
                                 @Override
                                 public void run() {
@@ -142,50 +201,9 @@ public class TempActivity extends AppCompatActivity {
                         Log.e(TAG, "Exception caught: ", e);
                     }
 
-
-
-                    //NOW DO THE LOAD FROM DARK SKYS
-
-                    String apiKey = "18131678eb944e61639caac84cb622b6"; //forecast.io, use for hourly/7day
-                    String forecastURL = "https://api.forecast.io/forecast/" + apiKey +
-                            "/" + theLat + "," + theLong;
-
-                    OkHttpClient client2 = new OkHttpClient();
-                    Request request2 = new Request.Builder()
-                            .url(forecastURL)
-                            .build();
-                    Call call2 = client2.newCall(request2);
-                    call2.enqueue(new Callback() {
-                        @Override
-                        public void onFailure(Request request2, IOException e) {
-
-                            alertUserAboutError();
-                        }
-
-                        @Override
-                        public void onResponse(Response response) throws IOException {
-
-                            try {
-                                String jsonData = response.body().string();
-                                Log.v(TAG, jsonData);
-                                if (response.isSuccessful()) {
-                                    myDarkForecast = parseForecastDetails(jsonData); //TODO This line must be called BEFORE the line that calls parseOpenForecastDetails method which is about 30 lines up from here (because of setting the time of forecasts)!!!
-
-                                } else {
-                                    alertUserAboutError();
-                                }
-                            } catch (IOException e) {
-                                Log.e(TAG, "Exception caught: ", e);
-                            } catch (JSONException e) {
-                                Log.e(TAG, "Exception caught: ", e);
-                            }
-                        }
-                    });
-
                 }
             });
 
-            officialForecast = combineForecast(myDarkForecast, myOpenForecast);
 
         } else {
             Toast.makeText(this, R.string.network_unavailable_message, Toast.LENGTH_LONG).show();
@@ -194,16 +212,25 @@ public class TempActivity extends AppCompatActivity {
 
     @OnClick(R.id.dailyButton)
     public void startDailyActivity(View view) {
-        Intent intent = new Intent(this, DailyForecastActivity.class);
-        intent.putExtra(MainActivity.DAILY_FORECAST, myDarkForecast.getDailyForecast());
-        startActivity(intent);
+        try {
+            Intent intent = new Intent(this, DailyForecastActivity.class);
+            intent.putExtra(MainActivity.DAILY_FORECAST, myDarkForecast.getDailyForecast());
+            startActivity(intent);
+        } catch (NullPointerException e) {
+            Toast.makeText(TempActivity.this, "Please wait", Toast.LENGTH_SHORT);
+        }
     }
 
     @OnClick(R.id.hourlyButton)
     public void startHourlyActivity(View view) {
-        Intent intent = new Intent(this, HourlyForecastActivity.class);
-        intent.putExtra(MainActivity.HOURLY_FORECAST, myDarkForecast.getHourlyForecast());
-        startActivity(intent);
+
+        try {
+            Intent intent = new Intent(this, HourlyForecastActivity.class);
+            intent.putExtra(MainActivity.HOURLY_FORECAST, myDarkForecast.getHourlyForecast());
+            startActivity(intent);
+        } catch (NullPointerException e){
+            Toast.makeText(TempActivity.this, "Please wait", Toast.LENGTH_SHORT);
+        }
     }
 
     private void toggleRefresh() {
@@ -218,9 +245,11 @@ public class TempActivity extends AppCompatActivity {
 
     private void updateDisplay() {
         Current current = myOpenForecast.getCurrent();
-        myTemperatureLabel.setText(current.getMyTemperature() + "");
-        myTimeLabel.setText("At " + current.getFormattedTime() + " it will be");
-        myHumidityValue.setText(current.getMyHumidity() + "");
+        myLocation.setText(TheLocUtil.getCurrentVillage() + "\n" + TheLocUtil.getCurrentDistrict());
+
+        myTemperatureLabel.setText((current.getMyTemperature() - 273) + "");
+        myTimeLabel.setText(current.getFormattedTime() + " ਨੂ ਤਾਪਮਾਨ ਹੋਵੇਗਾ");
+        myHumidityValue.setText((int)current.getMyHumidity() + "%");
         //myPrecipValue.setText(current.getMyPrecipChance() + "%");
         mySummaryLabel.setText(current.getMySummary());
         Drawable drawable = getResources().getDrawable(current.getIconId());
@@ -314,9 +343,10 @@ public class TempActivity extends AppCompatActivity {
         current.setMyHumidity(main.getDouble("humidity"));
         current.setMyTemperature(main.getDouble("temp"));
 
-        JSONObject weath = forecast.getJSONObject("weather");
-        current.setMySummary(weath.getString("main"));
-        current.setMyIcon(weath.getString("icon"));
+        JSONArray weath = forecast.getJSONArray("weather");
+        JSONObject weather = weath.getJSONObject(0);
+        current.setMySummary(weather.getString("main"));
+        current.setMyIcon(weather.getString("icon"));
         current.setMyTimeZone("IST");
 
 
@@ -376,10 +406,8 @@ public class TempActivity extends AppCompatActivity {
 
 
 
-
-
     private void alertUserAboutError() {
-        Log.v(TAG, "alerUserAboutError Log");
+        Log.v(TAG, "alerUserAboutError");
         AlertDialogFragment dialog = new AlertDialogFragment();
         dialog.show(getFragmentManager(), "error_dialog");
     }

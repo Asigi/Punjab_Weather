@@ -11,7 +11,7 @@
     <string name="hello_world">Hello world!</string>
 
     <string name="error_title">ਅਫ਼ਸੋਸ ਹੈ</string>
-    <string name="error_message">ਕੋੲੀ ਗਲਤੀ ਹੋ ਗਹੀ\nਮੁੜ ਕੋਸ਼ਿਸ ਕਰੋ ​​ਜੀ</string>
+    <string name="error_message">ਕੋੲੀ ਗਲਤੀ ਹੋ ਗਹੀ |\nਮੁੜ ਕੋਸ਼ਿਸ ਕਰੋ ​​ਜੀ |</string>
     <string name="error_ok_button_text">ਠੀਕ ਹੈ</string>
     <string name="network_unavailable_message">ਤੁਹਾਡਾ ਨੈੱਟਵਰਕ ਕੰਮ ਨਹੀ ਕਰ ਦਾ ਹੈ</string>
     <string name="no_daily_forecast_data">ਤੁਹਾਡਾ ਪਿੰਡ ਜ ਸ਼ਹਿਰ ਲਹੀ ਡਾਟਾ ਨਹੀ ਹੈ</string>

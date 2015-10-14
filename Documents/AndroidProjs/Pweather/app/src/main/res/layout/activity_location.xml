@@ -15,11 +15,10 @@
         android:text="ਤੁਹਾਡਾ ਜ਼ਿਲ੍ਹਾ  ਚੁਣੋ"
         android:id="@+id/textView3"
         android:textSize="30dp"
+        android:layout_marginTop="62dp"
+        android:textColor="#ccffde"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="137dp"
-        android:textColor="#ccffde" />
+        android:layout_centerHorizontal="true" />
 
     <Spinner
         android:layout_width="wrap_content"
@@ -38,12 +37,11 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="ਤੁਹਾਡਾ ਪਿੰਡ ਜ ਸ਼ਹਿਰ"
         android:id="@+id/textView4"
-        android:layout_below="@+id/LocationDistrictSpinner"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="31dp"
         android:textSize="30dp"
-        android:textColor="#ccffde" />
+        android:textColor="#ccffde"
+        android:layout_below="@+id/LocationDistrictSpinner"
+        android:layout_centerHorizontal="true" />
 
     <Spinner
         android:layout_width="wrap_content"

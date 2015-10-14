@@ -3,6 +3,7 @@
     <findStrings>
       <find>geticon</find>
       <find>geticonid</find>
+      <find>toast</find>
     </findStrings>
   </component>
 </application>

@@ -50,7 +50,7 @@ public class LocationActivity extends AppCompatActivity {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                         myVillage = parent.getItemAtPosition(position).toString();
-                        Toast.makeText(LocationActivity.this, "array int#: " + arraySetter(), Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(LocationActivity.this, "array int#: " + arraySetter(), Toast.LENGTH_SHORT).show();
                     }
 
                     @Override

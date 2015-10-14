@@ -2,6 +2,7 @@ package io.arsh.pweather.adapters;
 
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -65,13 +66,38 @@ public class DayAdapter extends BaseAdapter {
         holder.temperatureLabel.setText(day.getTemperatureMax() + "");
 
         if (position == 0) {
-            holder.dayLabel.setText("Today");
+            holder.dayLabel.setText("ਅੱਜ");
         } else {
-            holder.dayLabel.setText(day.getDayOfTheWeek());
+            holder.dayLabel.setText(getTheDay(day.getDayOfTheWeek()));
         }
 
         return convertView;
     }
+
+    protected String getTheDay(String theDay) {
+        String punjabiDay = "";
+        Log.e("DAY ADAPTER", "The day is: " + theDay);
+        if (theDay.toLowerCase().equals("sunday")) {
+            punjabiDay = "ਐਤਵਾਰ";
+        } else if (theDay.toLowerCase().equals("monday")) {
+            punjabiDay = "ਸੋਮਵਾਰ";
+        } else if (theDay.toLowerCase().equals("tuesday")) {
+            punjabiDay = "ਮੰਗਲਵਾਰ";
+        } else if (theDay.toLowerCase().equals("wednesday")){
+            punjabiDay = "ਬੁੱਧਵਾਰ";
+        } else if (theDay.toLowerCase().equals("thursday")) {
+            punjabiDay = "ਵੀਰਵਾਰ";
+        } else if (theDay.toLowerCase().equals("friday")) {
+            punjabiDay = "ਸ਼ੁੱਕਰਵਾਰ";
+        } else { //saturday
+            punjabiDay = "ਸ਼ਨੀਵਾਰ";
+        }
+
+        Log.e("DAY ADAPTER", "returning : " + punjabiDay);
+
+        return punjabiDay;
+    }
+
 
 
     /**

@@ -45,6 +45,15 @@ public class TheLocUtil {
         }
     }
 
+
+    public static String getCurrentVillage() {
+        return myVill;
+    }
+
+    public static String getCurrentDistrict() {
+        return myDist;
+    }
+
     /**
      * Checks myVill variable and myDist variable for what the village is
      * and then finds it's latitude position on the globe.

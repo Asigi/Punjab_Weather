@@ -1,6 +1,7 @@
 package io.arsh.pweather.weather;
 
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
@@ -38,12 +39,18 @@ public class Current {
      * @return a string representation of the time
      */
     public String getFormattedTime() {
+        /*
         SimpleDateFormat formatter = new SimpleDateFormat("h:mm a");
         formatter.setTimeZone(TimeZone.getTimeZone(getMyTimeZone()));
         Date dateTime = new Date(getMyTime() * 1000); //convert to milliseconds from seconds
         String timeString = formatter.format(dateTime);
+        */
 
-        return timeString;
+        DateFormat df = new SimpleDateFormat("HH:mm");
+        Date dateobj = new Date();
+        return df.format(dateobj);
+
+        //return timeString;
     }
 
     public void setMyTime(long myTime) {

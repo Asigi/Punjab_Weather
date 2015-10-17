@@ -50,7 +50,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="90dp"
         android:background="#ccffde"
-        android:textColor="#56c367"
+        android:textColor="#509f50"
         android:textSize="25dp"
         android:text="ਮੈਨੂੰ ਮੌਸਮ ਦਿਖਾ" />
 

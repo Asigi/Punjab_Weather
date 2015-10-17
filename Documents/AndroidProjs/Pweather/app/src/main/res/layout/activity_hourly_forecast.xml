@@ -5,12 +5,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="io.arsh.pweather.ui.HourlyForecastActivity"
-    android:background="#56c367">
+    android:background="#509f50">
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/recyclerView"
-        android:background="#56c367" />
+        android:background="#509f50" />
 
 </RelativeLayout>

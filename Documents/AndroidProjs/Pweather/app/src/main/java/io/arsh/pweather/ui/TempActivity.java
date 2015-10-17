@@ -82,6 +82,9 @@ public class TempActivity extends AppCompatActivity {
     }
 
 
+    //TODO, how about checking to see if the data is already on Parse
+    //TODO if it isn't then after the user has been shown his/her requested data,
+    //TODO ... load up and upload all the data for the rest of the cities in his/her district.
     private void getForecast(final double theLat, final double theLong) {
         String apiKeyW = "c6b2ddbf6c41031ec01ee83c14dca99a"; //open weather, use for current temperature
         String forecastURLW = "http://api.openweathermap.org/data/2.5/weather?"
@@ -248,7 +251,7 @@ public class TempActivity extends AppCompatActivity {
         myLocation.setText(TheLocUtil.getCurrentVillage() + "\n" + TheLocUtil.getCurrentDistrict());
 
         myTemperatureLabel.setText((current.getMyTemperature() - 273) + "");
-        myTimeLabel.setText(current.getFormattedTime() + " ਨੂ ਤਾਪਮਾਨ ਹੋਵੇਗਾ");
+        myTimeLabel.setText(current.getFormattedTime() + " ਨੂ ਤਾਪਮਾਨ ਹੋਵੇਗਾ"); //TODO format the time t obe out of 12 hours instead of 24, try modding by 12?
         myHumidityValue.setText((int)current.getMyHumidity() + "%");
         //myPrecipValue.setText(current.getMyPrecipChance() + "%");
         mySummaryLabel.setText(current.getMySummary());

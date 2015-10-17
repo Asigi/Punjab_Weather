@@ -63,7 +63,7 @@ public class DayAdapter extends BaseAdapter {
         Day day = myDays[position];
 
         holder.iconImageView.setImageResource(day.getIconId());
-        holder.temperatureLabel.setText(day.getTemperatureMax() + "");
+        holder.temperatureLabel.setText((day.getTemperatureMax() -32) * 5/9 + "");
 
         if (position == 0) {
             holder.dayLabel.setText("ਅੱਜ");
@@ -76,7 +76,7 @@ public class DayAdapter extends BaseAdapter {
 
     protected String getTheDay(String theDay) {
         String punjabiDay = "";
-        Log.e("DAY ADAPTER", "The day is: " + theDay);
+
         if (theDay.toLowerCase().equals("sunday")) {
             punjabiDay = "ਐਤਵਾਰ";
         } else if (theDay.toLowerCase().equals("monday")) {
@@ -93,7 +93,6 @@ public class DayAdapter extends BaseAdapter {
             punjabiDay = "ਸ਼ਨੀਵਾਰ";
         }
 
-        Log.e("DAY ADAPTER", "returning : " + punjabiDay);
 
         return punjabiDay;
     }
@@ -105,7 +104,7 @@ public class DayAdapter extends BaseAdapter {
      */
     private static class ViewHolder {
         ImageView iconImageView;  //public by default
-        TextView temperatureLabel;
+        TextView temperatureLabel; //TODO how about adding a minimum temperature?
         TextView dayLabel;
     }
 

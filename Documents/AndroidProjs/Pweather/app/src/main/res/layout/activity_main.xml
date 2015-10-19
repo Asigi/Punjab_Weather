@@ -49,8 +49,8 @@
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="90dp"
-        android:background="#ccffde"
-        android:textColor="#509f50"
+        android:background="#80000000"
+        android:textColor="#ccffde"
         android:textSize="25dp"
         android:text="ਮੈਨੂੰ ਮੌਸਮ ਦਿਖਾ" />
 

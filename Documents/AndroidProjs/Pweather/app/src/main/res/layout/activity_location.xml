@@ -18,8 +18,7 @@
         android:textColor="#99000000"
         android:layout_marginTop="170dp"
         android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_alignStart="@+id/textView4"
+        android:layout_centerHorizontal="true"
         android:paddingBottom="5dp" />
 
     <Spinner
@@ -65,8 +64,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:text="ਮੈਨੂੰ ਮੌਸਮ ਦਿਖਾ"
-        android:textColor="#509f50"
-        android:background="#ccffde"
+        android:textColor="#ccffde"
+        android:background="#80000000"
         android:textSize="25dp" />
 
     <TextView
